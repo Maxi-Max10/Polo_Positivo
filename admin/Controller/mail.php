@@ -1,19 +1,22 @@
 <?php
-
-print_r($_POST);
+include "../Model/conexion_admin.php";
+//print_r($_POST);
 
 $nombre = $_POST['nombre'];
-$nombre_empresa = $_POST['nombre_empresa'];
-$telefono = $_POST['telefono'];
+$id_dato_persona = $_POST['id_dato_persona'];
 $email = $_POST['email'];
-$mensaje = $_POST['mensaje'];
+$respuesta = $_POST['respuesta'];
+$estado = 0;
 
-/*
+
+$sentenciaM = "UPDATE dato_persona SET estado = '".$estado."' WHERE id_dato_persona = '".$id_dato_persona."'";
+$queryM = $conexion->query($sentenciaM);
+if ($queryM === TRUE) {
+}
 
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
@@ -45,9 +48,9 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = $mensaje;
+    $mail->Subject = 'Polo Positivo';
+    $mail->Body    = $respuesta;
+    $mail->AltBody = $respuesta;
 
     $mail->send();
     echo 'Message has been sent';
@@ -55,7 +58,9 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-*/
+
+
+
 
 
 ?>

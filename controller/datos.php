@@ -1,5 +1,7 @@
 <?php
 
+include "../model/conexion.php";
+
 print_r($_POST);
 
 $nombre = $_POST['nombre'];
@@ -7,7 +9,19 @@ $nombre_empresa = $_POST['nombre_empresa'];
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
 $mensaje = $_POST['mensaje'];
+$estado = 1; //por responder
 
+$sentencia = "INSERT INTO dato_persona(nombre,nombre_empresa,telefono,email,mensaje,estado) 
+    VALUES('".$nombre."', '".$nombre_empresa."', '".$telefono."', '".$email."', '".$mensaje."', '".$estado."')";
+
+$query = $conexion->query($sentencia);
+
+if ($query == TRUE) {
+    echo '1';
+    header('Location: ../contact.php');
+}
+
+/*
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -53,5 +67,6 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
+*/
 
 ?>
