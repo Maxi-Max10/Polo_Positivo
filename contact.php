@@ -71,7 +71,7 @@
                                             <a class="nav-link" href="about.html">Sobre Nosotros</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contacto</a>
+                                            <a class="nav-link" href="contact.php">Contacto</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -100,25 +100,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 ">
-                    <form class="main_form ">
+                    <form class="main_form" action="controller/mail.php" method="POST">
                         <div class="row">
                             <div class="col-md-12 ">
-                                <input class="form_contril" placeholder="Nombre y Apellido " type="text" name="Name ">
+                                <input class="form_contril" placeholder="Nombre y Apellido " type="text" name="nombre">
                             </div>
                             <div class="col-md-12 ">
-                                <input class="form_contril" placeholder="Empresa/Proyecto " type="text" name="EmpProy ">
+                                <input class="form_contril" placeholder="Empresa/Proyecto " type="text" name="nombre_empresa">
                             </div>
                             <div class="col-md-12">
-                                <input class="form_contril" placeholder="Teléfono" type="text" name=" Phone Number">
+                                <input class="form_contril" placeholder="Teléfono" type="text" name="telefono">
                             </div>
                             <div class="col-md-12">
-                                <input class="form_contril" placeholder="Email" type="text" name="Email">
+                                <input class="form_contril" placeholder="Email" type="text" name="email">
                             </div>
                             <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Mensaje" type="text" name="Message"></textarea>
+                                <textarea class="textarea" placeholder="Mensaje" type="text" name="mensaje"></textarea>
                             </div>
                             <div class="col-sm-12">
-                                <button class="send_btn">Eviar</button>
+                                <button type="submit" class="send_btn">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -174,3 +174,4 @@
 </body>
 
 </html>
+
