@@ -109,13 +109,13 @@
                                 <input class="form_contril" placeholder="Empresa/Proyecto " type="text" name="nombre_empresa">
                             </div>
                             <div class="col-md-12">
-                                <input class="form_contril" placeholder="Teléfono" type="text" name="telefono">
+                                <input class="form_contril" placeholder="Teléfono" type="text" name="telefono" required>
                             </div>
                             <div class="col-md-12">
-                                <input class="form_contril" placeholder="Email" type="mail" name="email">
+                                <input class="form_contril" placeholder="Email" type="mail" name="email" required>
                             </div>
                             <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Mensaje" type="text" name="mensaje"></textarea>
+                                <textarea class="textarea" placeholder="Mensaje" type="text" name="mensaje" required></textarea>
                             </div>
                             <div class="col-sm-12">
                                 <button type="submit" class="send_btn">Enviar</button>
