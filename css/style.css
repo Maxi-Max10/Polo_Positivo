@@ -527,7 +527,9 @@ button {
      box-shadow: #21212138;
 }
 
-
+.img-redonda{
+     border-radius: 50%;
+}
 /** end projects section **/
 
 
