@@ -589,7 +589,7 @@ body{
 .card-container{
      width: 100%;
      display: flex;
-     justify-content: space-around;
+     justify-content:space-evenly;
      z-index: 1;
 }
 /* Icons
@@ -916,6 +916,7 @@ body{
 
 .footer {
      background: #fff;
+     width: 100%;
      
 }
 
