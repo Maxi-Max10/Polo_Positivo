@@ -100,22 +100,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 ">
-                    <form class="main_form" action="controller/mail.php" method="POST">
+                    <form class="main_form" action="controller/datos.php" method="POST">
                         <div class="row">
                             <div class="col-md-12 ">
-                                <input class="form_contril" placeholder="Nombre y Apellido " type="text" name="nombre">
+                                <input class="form_contril" placeholder="Nombre y Apellido " type="text" name="nombre" required>
                             </div>
                             <div class="col-md-12 ">
                                 <input class="form_contril" placeholder="Empresa/Proyecto " type="text" name="nombre_empresa">
                             </div>
                             <div class="col-md-12">
-                                <input class="form_contril" placeholder="Teléfono" type="text" name="telefono">
+                                <input class="form_contril" placeholder="Teléfono" type="text" name="telefono" required>
                             </div>
                             <div class="col-md-12">
-                                <input class="form_contril" placeholder="Email" type="text" name="email">
+                                <input class="form_contril" placeholder="Email" type="mail" name="email" required>
                             </div>
                             <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Mensaje" type="text" name="mensaje"></textarea>
+                                <textarea class="textarea" placeholder="Mensaje" type="text" name="mensaje" required></textarea>
                             </div>
                             <div class="col-sm-12">
                                 <button type="submit" class="send_btn">Enviar</button>
